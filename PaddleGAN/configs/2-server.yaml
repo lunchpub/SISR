@@ -15,7 +15,7 @@
 
 
 # NOTE Server test
-# python main.py --config-file configs/2.yaml --evaluate-only --load output_dir/2-2023-06-02-12-57/iter_900000_weight.pdparams
+# python3 main.py --config-file configs/2-server.yaml --evaluate-only --load output_dir2/2/iter_900000_weight.pdparams
 
 
 # NOTE
@@ -48,8 +48,8 @@ export_model:
 dataset:
   train:
     name: SRDataset
-    gt_folder: data/VSAIv1/split_ss_444_lsv/train_HR_sub
-    lq_folder: data/VSAIv1/split_ss_444_lsv/train_LR_bicubic/X4_sub
+    gt_folder: data2/VSAIv1/split_ss_444_lsv/train_HR_sub
+    lq_folder: data2/VSAIv1/split_ss_444_lsv/train_LR_bicubic/X4_sub
     num_workers: 6
     batch_size: 32  #1 GPU
     use_shared_memory: False
@@ -80,8 +80,8 @@ dataset:
             keys: [image, image]
   test:
     name: SRDataset
-    gt_folder: data/Set14/GTmod12
-    lq_folder: data/Set14/LRbicx4
+    gt_folder: data2/Set14/GTmod12
+    lq_folder: data2/Set14/LRbicx4
     scale: 4
     preprocess:
       - name: LoadImageFromFile
