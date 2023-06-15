@@ -50,8 +50,8 @@ def setup(args, cfg):
             paddle.version.major) <= 2 and int(
                 paddle.version.minor) <= 4 and paddle.is_compiled_with_npu():
         paddle.set_device('npu')
-    elif paddle.is_compiled_with_custom_device("npu"):
-        paddle.set_device('npu')
+    # elif paddle.is_compiled_with_custom_device("npu"):
+    #     paddle.set_device('npu')
     elif paddle.is_compiled_with_xpu():
         paddle.set_device('xpu')
     else:
