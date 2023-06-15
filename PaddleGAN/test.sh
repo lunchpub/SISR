@@ -1,1 +1,2 @@
 python3 tools/main.py --config-file configs/2-server.yaml --evaluate-only --load output_dir2/2/iter_900000_weight.pdparams
+python3 tools/main.py --config-file configs/2-server.yaml --evaluate-only --load output_dir2/2/iter_900000_weight.pdparams
